@@ -1,4 +1,5 @@
 (function () {
+    /* 1_1.1 */
     document.getElementById("ex1_button")?.addEventListener("click", () => {
         const numbers = [];
         for (let i = 0; i < 10; i++) {
@@ -7,6 +8,7 @@
         document.getElementById("ex1_content").textContent = numbers.join(",");
     })
 
+    /* 1_1.2 i 1_3.3 */
     const inputField = document.getElementById("ex2_text");
     inputField?.addEventListener("input", () => {
         const text = inputField.value;
@@ -28,6 +30,7 @@
         document.getElementById("ex2_counter").textContent = counter;
     })
 
+    /* 1_2.1 i 1_2.2 */
     const item = document.getElementById("ex3_element");
     item?.addEventListener("dragstart", (e) => {
         e.dataTransfer.setData("text/plain", e.target.id);
@@ -61,6 +64,7 @@
         }
     })
 
+    /* 1_3.1 */
     const animatedBox = document.getElementById("ex6_element");
     document.getElementById("ex6_animate_button")?.addEventListener("click", () => {
         animatedBox.classList.add("animate");
@@ -70,6 +74,7 @@
         animatedBox.classList.remove("animate");
     })
 
+    /* 1_3.2 */
     const colors = [
         "#f4f6f8",
         "#eef2f5",
@@ -83,4 +88,22 @@
         const num = Math.floor(Math.random() * colors.length);
         document.body.style.backgroundColor = colors[num];
     })
+
+    /* 1_3.4 */
+    let counter = 0;
+    let timer = null
+
+    const display = document.getElementById("ex6_content")
+    document.getElementById("ex6_button")?.addEventListener("click", () => {
+        if(timer === null) {
+            timer = setInterval(() => {
+                counter++;
+                display.textContent = counter;
+            }, 1000);
+        } else {
+            clearInterval(timer);
+            timer = null;
+        }
+    })
+
 })();
