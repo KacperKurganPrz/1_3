@@ -1,0 +1,49 @@
+body {
+    background-color: aliceblue;
+  }
+  
+  .ex {
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  #ex3_one, #ex3_two {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    height: 50px;
+  }
+  
+  #ex3_element {
+    display: block;
+    cursor: pointer;
+    background-color: red;
+    width: 100px;
+  }
+
+  @keyframes animation {
+    from {}
+    to {left: 200px;}
+  }
+
+
+  @keyframes nudge {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(calc(100vw - 100% - 30px));
+    }
+  }
+
+  #ex6_element {
+    display: block;
+    background-color: hotpink;
+    width: 100px;
+    height: 30px;
+  }
+
+  .animate {
+    animation: nudge 5s linear 1
+  }
