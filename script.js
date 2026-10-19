@@ -11,6 +11,7 @@
     inputField?.addEventListener("input", () => {
         const text = inputField.value;
         let error;
+        let counter = "Wpisano " + text.length + " znaków";
         if(text.length !== 9) {
             error = "Długość numeru musi być równa 9";
         }
@@ -24,6 +25,7 @@
             error = "Numer telefonu jest poprawny"
         }
         document.getElementById("ex2_content").textContent = error;
+        document.getElementById("ex2_counter").textContent = counter;
     })
 
     const item = document.getElementById("ex3_element");
