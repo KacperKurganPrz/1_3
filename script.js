@@ -67,4 +67,18 @@
     animatedBox?.addEventListener("animationend", () => {
         animatedBox.classList.remove("animate");
     })
+
+    const colors = [
+        "#f4f6f8",
+        "#eef2f5",
+        "#e8ecef",
+        "#e9edc9",
+        "#faedcd",
+        "#e2ece9",
+        "#f0e6ef"
+    ];
+    document.getElementById("ex4_button")?.addEventListener("click", () => {
+        const num = Math.floor(Math.random() * colors.length);
+        document.body.style.backgroundColor = colors[num];
+    })
 })();
